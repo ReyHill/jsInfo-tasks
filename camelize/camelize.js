@@ -6,7 +6,7 @@ function kebabToCamel(str) {
         if(index === 0) {
            return element.toLowerCase(); 
         } else if(index !== 0) {
-            return element.charAt(0).toUpperCase() + element.slice(1);
+            return element.charAt(0).toUpperCase() + element.slice(1).toLowerCase();
         }
     }); 
     const joined = camelCased.join(''); 
