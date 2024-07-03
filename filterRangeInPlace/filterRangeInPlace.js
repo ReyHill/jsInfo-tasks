@@ -3,16 +3,16 @@
 
 const array = [1,2,3,4,5,6,7,8,9,10];
 
-// IF the current iteration is greater than and equal to a AND less than or equal to b NOT, 
-    // splice this iteration from the array
-// return the mutated array
-
 function mutate(arr, a, b) {
-    arr.forEach( (element, index, array) => {
-        if(element >= a && element <= b) {
-            console.log(element); 
+    for(let i = 0; i < arr.length; i++) {
+        let value = arr[i];
+        if(value < a || value > b) {
+            arr.splice(i, 1); 
+            i--;
         }
-    })
+    }
+    return arr;
 }
 
 mutate(array, 3, 8);
+console.log(array); 
